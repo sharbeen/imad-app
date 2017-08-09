@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles={
-    articleOne: {
+  'article-one': {
     title:'Article - One Sharbeen Rasmiya',
     heading:'Article-One',
     date:'5th august july',
@@ -18,26 +18,19 @@ var articles={
             <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
             </p>`
 },
-    articleTwo: {
+  'article-two': {
     title:'Article - Two Sharbeen Rasmiya',
     heading:'Article-Two',
-    date:'5th august july',
-    content:`<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
-            </p>
-            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
-            </p>
-            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
+    date:'13th august july',
+    content:`<p>This is the content part in my article two webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
             </p>`
+           
 },
-    articleThree: {
+  'article-three': {
     title:'Article - Three Sharbeen Rasmiya',
     heading:'Article-Three',
-    date:'5th august july',
+    date:'15th august july',
     content:`<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
-            </p>
-            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
-            </p>
-            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
             </p>`
 }
     };
@@ -84,8 +77,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article1', function(req,res){
-   res.send(createTemplate(articleOne));
+app.get('/:articleName', function(req,res){
+   res.send(createTemplate(articles[articleName]));
 });
 app.get('/article2', function(req,res){
     res.send(createTemplate(articleTwo));
