@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne = {
+var articles={
+    articleOne: {
     title:'Article - One Sharbeen Rasmiya',
     heading:'Article-One',
     date:'5th august july',
@@ -16,7 +17,30 @@ var articleOne = {
             </p>
             <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
             </p>`
-};
+},
+    articleTwo: {
+    title:'Article - Two Sharbeen Rasmiya',
+    heading:'Article-Two',
+    date:'5th august july',
+    content:`<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
+            </p>
+            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
+            </p>
+            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
+            </p>`
+},
+    articleThree: {
+    title:'Article - Three Sharbeen Rasmiya',
+    heading:'Article-Three',
+    date:'5th august july',
+    content:`<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
+            </p>
+            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
+            </p>
+            <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
+            </p>`
+}
+    };
 
 function createTemplate(data){
     
@@ -64,10 +88,10 @@ app.get('/article1', function(req,res){
    res.send(createTemplate(articleOne));
 });
 app.get('/article2', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.send(createTemplate(articleTwo));
 });
 app.get('/article3', function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+   res.send(createTemplate(articleThree));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
