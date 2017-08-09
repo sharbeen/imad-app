@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element = document.getElementById('main-text');
-element.innerHTML = 'NEW VALUE';
+element.innerHTML = 'NEWVALUE';
 var img = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight()
