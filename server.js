@@ -6,12 +6,12 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles={
+var articles = {
   'article-one': {
-    title:'Article - One Sharbeen Rasmiya',
-    heading:'Article-One',
-    date:'5th august july',
-    content:`<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
+    title: 'Article - One Sharbeen Rasmiya',
+    heading: 'Article-One',
+    date: '5th august july',
+    content: `<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
             </p>
             <p>This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage
             </p>
@@ -19,18 +19,18 @@ var articles={
             </p>`
 },
   'article-two': {
-    title:'Article - Two Sharbeen Rasmiya',
-    heading:'Article-Two',
-    date:'13th august july',
+    title: 'Article - Two Sharbeen Rasmiya',
+    heading: 'Article-Two',
+    date: '13th august july',
     content:`<p>This is the content part in my article two webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
             </p>`
            
 },
   'article-three': {
-    title:'Article - Three Sharbeen Rasmiya',
-    heading:'Article-Three',
-    date:'15th august july',
-    content:`<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
+    title: 'Article - Three Sharbeen Rasmiya',
+    heading: 'Article-Three',
+    date: '15th august july',
+    content: `<p>This is the content part in my webpage.This is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpageThis is the content part in my webpage.
             </p>`
 }
     };
