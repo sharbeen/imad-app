@@ -22,6 +22,6 @@ button.onclick = function(){
     //make the request
     //render the variable in the correct span
     
-    request.open('GET','http://chappisurf.imad.hasura-app.io/counter',true);
+    request.open('GET', 'http://chappisurf.imad.hasura-app.io/counter', true);
     request.send(null);
 };
