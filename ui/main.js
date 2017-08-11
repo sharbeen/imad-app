@@ -1,6 +1,6 @@
 var button = document.getElementById('counter');
 
-button.onclick = function(){
+button.onclick = function (){
     //Make a request to counter end point
     //create a request object
     var request = new XMLHttpRequest();
@@ -8,7 +8,7 @@ button.onclick = function(){
     
     //capture the response and store it in a variable
     request.onreadystatechange = function() {
-      if(request.readyState === XMLHttprequest.DONE){
+      if(request.readyState === XMLHttpRequest.DONE){
           //take some action
           if(request.status === 200)
           {
