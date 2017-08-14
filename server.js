@@ -83,9 +83,6 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'test.html'));
-});
 var pool = new Pool(config);
 app.get('/test-db', function(req,res) {
     pool.query('SELECT * FROM article', function (err, result) {
